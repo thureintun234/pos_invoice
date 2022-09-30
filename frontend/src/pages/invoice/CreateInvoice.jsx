@@ -8,7 +8,6 @@ import {
   Layout,
   Row,
   Select,
-  Space,
   Spin,
   Table,
   Typography,
@@ -110,7 +109,7 @@ const CreateInvoice = () => {
               <Col span={10}>
                 <Form.Item
                   name='date'
-                  label='Date'
+                  label='Invoice Date'
                   rules={[
                     {
                       required: true,
@@ -122,7 +121,7 @@ const CreateInvoice = () => {
 
               {/* note */}
               <Col span={10}>
-                <Form.Item name='note' label='Note'>
+                <Form.Item name='note' label='Invoice Note'>
                   <Input.TextArea rows={3} />
                 </Form.Item>
               </Col>
