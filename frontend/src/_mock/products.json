@@ -1,0 +1,9 @@
+{
+    "products":[
+        {"key":1,"name":"Phone","picture":"https://www.costco.co.uk/medias/sys_master/images/ha3/hf9/69532599156766.jpg","stock":22,"price":200000},
+        {"key":2,"name":"Laptop","picture":"https://cdn.pocket-lint.com/r/s/1200x630/assets/images/152137-laptops-review-apple-macbook-pro-2020-review-image1-pbzm4ejvvs.jpg","stock":12,"price":400000},
+        {"key":3,"name":"Monitor","picture":"https://www.lg.com/uk/images/monitors/md07535280/Dm-02.jpg","stock":18,"price":150000},
+        {"key":4,"name":"Watch","picture":"https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-3-pro-leather/img/one/huawei-watch-3-pro-kv.png","stock":33,"price":20000},
+        {"key":5,"name":"Airpod","picture":"https://d28i4xct2kl5lp.cloudfront.net/product_images/97757_2cc715ec-676c-4666-9790-035c6ddb21c7.jpg","stock":6,"price":200}
+    ]
+}

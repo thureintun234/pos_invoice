@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useRoutes } from "react-router-dom";
-import Dashboard from "./layout/Dashboard";
+import Dashboard from "./layout/index";
 import DashboardApp from "./pages/DashboardApp";
 import CreateInvoice from "./pages/invoice/CreateInvoice";
 import ShowInvoices from "./pages/invoice/ShowInvoices";
