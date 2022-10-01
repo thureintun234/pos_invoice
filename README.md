@@ -53,6 +53,6 @@ npm start
 | GET        | /api/invoices/:id | Get a specific invoices    |
 | Delete     | /api/invoices/:id | Delete a specific invoices |
 
-- [Frontend Dashboard](https://www.expresjs.org/) This is a frontend part of the project hosted in Netlify.
+- [Frontend Dashboard](https://6337fef1e4669248f18349a4--posthureintun.netlify.app/) This is a frontend part of the project hosted in Netlify.
 
-- [REST API](https://www.expresjs.org/) This is the api hosted in Heroku.
+- [REST API](https://posthureintun.herokuapp.com/) This is the api hosted in Heroku.
