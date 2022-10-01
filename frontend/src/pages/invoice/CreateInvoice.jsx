@@ -15,21 +15,34 @@ import {
 import React, { useState } from "react";
 import { SaveOutlined } from "@ant-design/icons";
 import productJson from "../../_mock/products.json";
+import { useDispatch } from "react-redux";
+import { saveInvoice } from "../../store/actions";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const { Header } = Layout;
 const { Title } = Typography;
 
 const CreateInvoice = () => {
   const [invoiceProducts, setInvoiceProducts] = useState([]);
+  const [date, setDate] = useState("");
   const [form] = Form.useForm();
   const { products } = productJson;
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const onFinish = (values) => {
-    console.log(values);
+    const newInvoice = { ...values, products: invoiceProducts, date: date };
+    dispatch(saveInvoice(newInvoice));
+    form.resetFields();
+    setDate("");
+
+    toast.success("Invoice created Successfully");
+    navigate("/dashboard/show-invoices");
   };
 
   const onDateChange = (date, dateString) => {
-    console.log(date, dateString);
+    setDate(dateString);
   };
 
   const addSaleItem = (product) => {};
@@ -115,7 +128,7 @@ const CreateInvoice = () => {
                       required: true,
                     },
                   ]}>
-                  <DatePicker onChange={onDateChange} />
+                  <DatePicker value={date} onChange={onDateChange} />
                 </Form.Item>
               </Col>
 
@@ -160,6 +173,10 @@ const CreateInvoice = () => {
                           />
                         }
                         onClick={() => addSaleItem(p)}>
+                        <p>
+                          <span style={{ fontWeight: "bold" }}>Stock</span>:{" "}
+                          {p.stock}
+                        </p>
                         <Card.Meta title={p.name} description={p.price} />
                       </Card>
                     </Select.Option>

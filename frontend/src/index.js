@@ -9,6 +9,9 @@ import { setAccessToken } from "./service/api";
 import { getUser } from "./store/actions";
 import { SET_CURRENT_USER } from "./store/types";
 
+// recact notify
+import "react-toastify/dist/ReactToastify.css";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // token take from local storage after every rendering
