@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const host = "http://localhost:3000";
+export const host = "http://localhost:3001/api";
 
 export const call = async (method, path, data) => {
   const response = await axios[method](`${host}/${path}`, data);

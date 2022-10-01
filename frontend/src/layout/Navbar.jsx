@@ -18,8 +18,7 @@ const text = (
 const Navbar = ({ collapsed, setCollapsed, content }) => {
   return (
     <Header
-      style={{ paddingTop: "13px", backgroundColor: "var(--white-color)" }}
-    >
+      style={{ paddingTop: "13px", backgroundColor: "var(--white-color)" }}>
       <Button
         style={{
           float: "left",
@@ -27,16 +26,14 @@ const Navbar = ({ collapsed, setCollapsed, content }) => {
           color: "var(--white-color)",
           marginRight: "3px",
         }}
-        onClick={() => setCollapsed(!collapsed)}
-      >
+        onClick={() => setCollapsed(!collapsed)}>
         {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
       </Button>
       <Popover
-        placement="bottom"
+        placement='bottom'
         content={content}
         title={text}
-        trigger="click"
-      >
+        trigger='click'>
         <Avatar
           style={{
             float: "right",
@@ -44,11 +41,11 @@ const Navbar = ({ collapsed, setCollapsed, content }) => {
             cursor: "pointer",
           }}
           icon={<UserOutlined />}
-          size="large"
+          size='large'
         />
       </Popover>
       <Title style={{ color: "var(--primary-color)" }} level={3}>
-        InterAktiv Technology Pte Ltd
+        InterAktiv
       </Title>
     </Header>
   );

@@ -1,0 +1,17 @@
+export const SET_CURRENT_USER = "SET_CURRENT_USER";
+export const SET_USERS = "SET_USERS";
+export const DELETE_USER = "DELETE_USER";
+
+export const SET_LOADING = "SET_LOADING";
+export const SET_SUCCESS = "SET_SUCCESS";
+export const SET_DELETE = "SET_DELETE";
+export const SET_DELETE_SUCCESS = "SET_DELETE_SUCCESS";
+
+export const ADD_ERROR = "ADD_ERROR";
+export const REMOVE_ERROR = "REMOVE_ERROR";
+
+export const SHOW_INVOICES = "SHOW_INVOICES";
+export const SHOW_INVOICE = "SHOW_INVOICE";
+export const CREATE_INVOICES = "CREATE_INVOICES";
+export const UPDATE_INVOICES = "UPDATE_INVOICES";
+export const FILTER_INVOICES = "FILTER_INVOICES";
