@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Form, Input, Typography, Space, Button, Spin, message } from "antd";
+import React from "react";
+import { Form, Input, Typography, Space, Button, Spin } from "antd";
 import Layout from "antd/lib/layout/layout";
 import { useDispatch, useSelector } from "react-redux";
 import { authUser } from "../store/actions";
@@ -8,7 +8,6 @@ const { Title } = Typography;
 const Login = () => {
   const [form] = Form.useForm();
   const status = useSelector((state) => state.status);
-  const error = useSelector((state) => state.error);
   const dispatch = useDispatch();
 
   //   useEffect(() => {

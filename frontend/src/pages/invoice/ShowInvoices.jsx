@@ -6,29 +6,6 @@ import { getInvoices } from "../../store/actions";
 
 const { Title } = Typography;
 const ShowInvoices = () => {
-  // const [invoices, setInvoices] = useState([
-  //   {
-  //     key: 1,
-  //     customer_name: "shadow",
-  //     sale_person: "david",
-  //     price: 22000,
-  //     note: "",
-  //   },
-  //   {
-  //     key: 2,
-  //     customer_name: "brian",
-  //     sale_person: "john",
-  //     price: 26000,
-  //     note: "",
-  //   },
-  //   {
-  //     key: 3,
-  //     customer_name: "mpj",
-  //     sale_person: "david",
-  //     price: 12000,
-  //     note: "God Of Javascript",
-  //   },
-  // ]);
   const invoices = useSelector((state) => state.invoice.invoices);
   const status = useSelector((state) => state.status);
   const dispatch = useDispatch();
