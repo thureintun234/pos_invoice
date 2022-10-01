@@ -4,7 +4,6 @@ import { DollarCircleOutlined, LineChartOutlined } from "@ant-design/icons";
 import ShowText from "../components/ShowText";
 import { useDispatch, useSelector } from "react-redux";
 import { getInvoices } from "../store/actions";
-import merge from "lodash/merge";
 import ReactApexChart from "react-apexcharts";
 
 // today date formated function
@@ -45,10 +44,11 @@ const DashboardApp = () => {
     series: [
       {
         name: "Sales",
-        data: [
-          20000, 1000, 2000, 50000, 21000, 36000, 28000, 23000, 14000, 8000,
-          2000, 6000,
-        ],
+        data: totalInvProductsArray,
+        // data: [
+        //   20000, 1000, 2000, 50000, 21000, 36000, 28000, 23000, 14000, 8000,
+        //   2000, 6000,
+        // ],
       },
     ],
     options: {
@@ -67,12 +67,13 @@ const DashboardApp = () => {
       dataLabels: {
         enabled: true,
         formatter: function (val) {
-          return val + "%";
+          return val + " MMK";
         },
         offsetY: -20,
         style: {
-          fontSize: "12px",
-          colors: ["#304758"],
+          fontSize: "10px",
+          colors: ["gray"],
+          // colors: ["#304758"],
         },
       },
 

@@ -91,3 +91,21 @@ export const getUserAccount = (id) => {
     dispatch({ type: SET_LOADING });
   };
 };
+
+export const deleteInvoice = (id) => {
+  return async (dispatch) => {
+    dispatch({ type: SET_SUCCESS, payload: false });
+    dispatch({ type: SET_LOADING });
+
+    try {
+      await call("delete", `invoices/${id}`);
+
+      dispatch(filterInvoices(id));
+      dispatch({ type: SET_SUCCESS, payload: true });
+      dispatch({ type: REMOVE_ERROR });
+    } catch (error) {
+      dispatch({ type: ADD_ERROR, payload: error });
+    }
+    dispatch({ type: SET_LOADING });
+  };
+};

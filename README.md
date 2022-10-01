@@ -7,6 +7,7 @@ This is a point of sale full stack application for invoice system. Postman colle
 ### Dependencies
 
 - React
+- Redux
 - Express
 - Mongoose
 - Helmat
@@ -50,6 +51,7 @@ npm start
 | POST       | /api/invoices     | To create invoice          |
 | GET        | /api/invoices     | Get all invoices           |
 | GET        | /api/invoices/:id | Get a specific invoices    |
+| Delete     | /api/invoices/:id | Delete a specific invoices |
 
 - [Frontend Dashboard](https://www.expresjs.org/) This is a frontend part of the project hosted in Netlify.
 

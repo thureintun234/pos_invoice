@@ -37,4 +37,15 @@ router.get("/:id", auth, async (req, res) => {
   }
 });
 
+router.delete("/:id", auth, async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    const deletedInvoice = await Invoice.findByIdAndDelete(id);
+    res.status(204).end();
+  } catch (error) {
+    res.status(401).send(error);
+  }
+});
+
 module.exports = router;
