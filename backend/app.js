@@ -9,6 +9,9 @@ const logger = require("./utils/logger");
 const mongoose = require("mongoose");
 const helmet = require("helmet");
 
+const userRouter = require("./routers/user.router");
+const invoiceRouter = require("./routers/invoice.router");
+
 mongoose
   .connect(config.MONGODB_URI)
   .then(() => {
@@ -28,6 +31,8 @@ app.use(helmet());
 app.get("/", (req, res) => {
   res.send("<h1>Hello World</h1>");
 });
+app.use("/api/users", userRouter);
+app.use("/api/invoices", invoiceRouter);
 
 // validation middlewares
 app.use(middleware.unknownEndpoint);
