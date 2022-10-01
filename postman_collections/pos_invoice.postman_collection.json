@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "99cdacb7-10f7-432c-8779-988627afd3f5",
+		"name": "pos_invoice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13753596"
+	},
+	"item": [
+		{
+			"name": "create a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Thu Rein Tun\",\n    \"email\":\"thurein@gmail.com\",\n    \"phone\":\"111000011\",\n    \"password\":\"123123123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzM3OTI5MDgwM2Q0ZjM2NTZmYmE0YmUiLCJpYXQiOjE2NjQ1ODYzODR9.TfYWXtza4R5ysUvEmcw_mWaI6nLNgmtB6ZRtIKh9vxk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "my login info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzM3OTI5MDgwM2Q0ZjM2NTZmYmE0YmUiLCJpYXQiOjE2NjQ1ODYzODR9.TfYWXtza4R5ysUvEmcw_mWaI6nLNgmtB6ZRtIKh9vxk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/api/users/me",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a invoice",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzM3OTI5MDgwM2Q0ZjM2NTZmYmE0YmUiLCJpYXQiOjE2NjQ1ODYzODR9.TfYWXtza4R5ysUvEmcw_mWaI6nLNgmtB6ZRtIKh9vxk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\":\"19-09-2022\",\n    \"customer_name\":\"david\",\n    \"sale_person\":\"brian\",\n    \"note\":\"a note\",\n    \"products\":[{\"id\":1,\"image\":\"www.google.com\",\"stock\":22},{\"id\":2,\"image\":\"www.facebook.com\",\"stock\":12}]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/invoices",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"invoices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all invoice",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzM3OTI5MDgwM2Q0ZjM2NTZmYmE0YmUiLCJpYXQiOjE2NjQ1ODYzODR9.TfYWXtza4R5ysUvEmcw_mWaI6nLNgmtB6ZRtIKh9vxk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/api/invoices",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"invoices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a invoice",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzM3OTI5MDgwM2Q0ZjM2NTZmYmE0YmUiLCJpYXQiOjE2NjQ1ODYzODR9.TfYWXtza4R5ysUvEmcw_mWaI6nLNgmtB6ZRtIKh9vxk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/api/invoices/63379831b5528512914c9b54",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"invoices",
+						"63379831b5528512914c9b54"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"thurein@gmail.com\",\n    \"password\":\"123123123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get my",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
